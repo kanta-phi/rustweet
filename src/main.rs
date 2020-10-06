@@ -14,6 +14,7 @@ struct Tweet {
     favorite_count: u32,
     user: User,
     entities: Entity,
+    retweeted_status: Box<Option<Tweet>>,
 }
 
 #[derive(Deserialize, Debug)]
